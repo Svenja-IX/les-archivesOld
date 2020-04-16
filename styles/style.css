@@ -90,7 +90,7 @@ header .btn {
 }
 #bouton-header {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;
@@ -107,17 +107,17 @@ header .btn {
     margin-top: 30px;
 }
 
-/* .card {
-    font-family: 'StarWars1';
-    background: rgb(30,30,30);
-    color: white;
-    width: 400px;
-    height: auto;
-    margin: auto;
-    margin-bottom: 50px;
-    display: inline;
-    justify-content: center;
-} */
+.card {
+  font-family: 'StarWars1';
+  background: rgb(30,30,30);
+  color: white;
+  width: 400px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
 .btn-primary {
     color: #007bff;
     background-color: white;
