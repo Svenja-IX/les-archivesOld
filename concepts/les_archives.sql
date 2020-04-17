@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 16 avr. 2020 à 17:42
+-- Généré le : ven. 17 avr. 2020 à 16:23
 -- Version du serveur :  5.7.24
 -- Version de PHP : 7.2.19
 
@@ -32,7 +32,7 @@ CREATE TABLE `jedi` (
   `jedi_id` int(11) NOT NULL,
   `jedi_prenom` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `jedi_nom` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `jedi_img` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jedi_img` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `jedi_rang` int(11) NOT NULL,
   `jedi_race` int(11) NOT NULL,
   `jedi_sexe` int(11) NOT NULL
@@ -65,7 +65,8 @@ CREATE TABLE `race` (
 
 INSERT INTO `race` (`race_id`, `race_nom`) VALUES
 (1, 'Togruta'),
-(2, 'Humain(e)');
+(2, 'Humain(e)'),
+(3, 'Zabrak');
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,8 @@ INSERT INTO `rang` (`rang_id`, `rang_nom`) VALUES
 (1, 'Padawan'),
 (2, 'Chevalier Jedi'),
 (3, 'Maître Jedi'),
-(4, 'Grand Maître Jedi');
+(4, 'Grand Maître Jedi'),
+(5, 'Sith');
 
 -- --------------------------------------------------------
 
@@ -116,6 +118,7 @@ INSERT INTO `sexe` (`sexe_id`, `sexe_nom`) VALUES
 --
 ALTER TABLE `jedi`
   ADD PRIMARY KEY (`jedi_id`),
+  ADD UNIQUE KEY `jedi_prenom` (`jedi_prenom`,`jedi_nom`),
   ADD KEY `jedi_sexe_id` (`jedi_sexe`),
   ADD KEY `jedi_race_id` (`jedi_race`),
   ADD KEY `jedi_rang_id` (`jedi_rang`);
@@ -146,19 +149,19 @@ ALTER TABLE `sexe`
 -- AUTO_INCREMENT pour la table `jedi`
 --
 ALTER TABLE `jedi`
-  MODIFY `jedi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `jedi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT pour la table `race`
 --
 ALTER TABLE `race`
-  MODIFY `race_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `race_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `rang`
 --
 ALTER TABLE `rang`
-  MODIFY `rang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `rang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `sexe`
