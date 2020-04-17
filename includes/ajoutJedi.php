@@ -10,7 +10,7 @@
             </div>
             <div class="modal-body">
               <!-- FORMULAIRE -->
-                <form action="jedi.php" method="POST">
+                <form action="jedi.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Prénom</label>
                       <input type="text" class="form-control" name="jedi_prenom" id="jedi_prenom" placeholder="Prénom">
@@ -18,10 +18,6 @@
                     <div class="form-group">
                       <label for="exampleInputEmail1">Nom</label>
                       <input type="text" class="form-control" name="jedi_nom" id="jedi_nom" placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Image</label>
-                      <input type="text" class="form-control" name="jedi_img" id="jedi_img" placeholder="Lien image">
                     </div>
                     <select name="jedi_rang" id="jedi_rang">
                       <option value="1">Padawan</option>
@@ -39,6 +35,7 @@
                       <option value="2">Humain(e)</option>
                       <option value="3">Zabrak</option>
                     </select>
+                    <input type="file" name="jedi_img">
                     <button type="submit" class="btn btn-primary">Ajouter</button>
                   </form>
             </div>
