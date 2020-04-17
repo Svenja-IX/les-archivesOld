@@ -28,8 +28,8 @@
                 Inscription
                 </button>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ajoutJedi">
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ajoutJedi">
                 Add jedi
-                </button>
+                </button> -->
             </div>
 </header>

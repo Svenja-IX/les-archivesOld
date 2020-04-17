@@ -24,7 +24,7 @@ if (!empty($_POST['jedi_prenom']) && isset($_POST['jedi_nom'])) {
 
 		if (in_array($fileActualExt, $allowed)) {
 			if ($fileError === 0) {
-				if ($fileSize < 1000000) {
+				if ($fileSize < 10000000) {
 					$fileNameNew = uniqid('', true).".".$fileActualExt;
 					$fileDestination = 'uploads/'.$fileNameNew;
 					move_uploaded_file($fileTmpName, $fileDestination);
@@ -53,9 +53,9 @@ if (!empty($_POST['jedi_prenom']) && isset($_POST['jedi_nom'])) {
 		// si la requete n'aboutit pas (car le mail n'a pas été rentré car il doit être unique,  
 		// alors la requete ne s'effectue pas, si l'email n'est pas dans la bdd la requete se fais sans soucis
 		if($stmt->rowCount()==1){
-			echo "<main id='insertMessage'>insertion réussie !";
+			header("location: index.php?uploadsuccess+insertionsuccess");
 		} else {
-			echo "<main id='insertMessage'>insertion foirée !</main>";
+			header("location: index.php?uploadfail");
 		}
 
 
