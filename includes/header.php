@@ -20,13 +20,13 @@
 </nav>
         <div id="bouton-header">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#connect">
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#connect">
                 Connexion
-                </button>
+                </button> -->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signIn">
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signIn">
                 Inscription
-                </button>
+                </button> -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ajoutJedi">
                 Add jedi
