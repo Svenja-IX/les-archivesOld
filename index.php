@@ -16,6 +16,7 @@ require_once ('includes/bdd.php');
     include ('includes/header.php');
     include ('includes/inscriptionForm.php');
     include ('includes/connexionForm.php');
+    include ('includes/ajoutJedi.php');
 ?>
     <main>
 <?php
@@ -28,8 +29,7 @@ require_once ('includes/bdd.php');
                 <h5 class="card-title">'.$jedi['jedi_prenom']."   ".$jedi['jedi_nom'].'</h5>
                 <p class="card-text">'.$jedi['rang_nom'].'</p>
                 <a href="#" class="btn btn-primary">Plus d\'infos</a></div></div>';
-}
-
+    }
 ?>
 </main>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

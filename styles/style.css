@@ -7,16 +7,16 @@
   src: url('NunitoSans-ExtraLight.ttf');
   }
 /* Ajout police StarWars1 */
-#header-title, nav, article {
+#header-title, nav {
   font-family: 'StarWars1';
 }
 /* Ajout police Nunito */
-#article-text p, article ul {
+#article-text p, article ul, .card {
   font-family: 'Nunito';
 }
-  html {
-    overflow-y: scroll;
-  }
+html {
+  overflow-y: scroll;
+}
 body {
       background-color: rgb(10, 10, 10);
       background: url('../images/Jedi-Archives.jpg') no-repeat center center fixed;
@@ -29,6 +29,7 @@ main {
   height: 1500px;
   width: 100%;
   position: absolute;
+  display: flex;
 }
 article {
     background: rgba(0, 0, 0,90%);
@@ -108,12 +109,12 @@ header .btn {
 }
 
 .card {
-  font-family: 'StarWars1';
   background: rgb(30,30,30);
   color: white;
   width: 400px;
-  height: auto;
+  height: 400px;
   margin: auto;
+  margin-top: 0;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -122,6 +123,12 @@ header .btn {
     color: #007bff;
     background-color: white;
     border-color: #007bff;
+}
+#ajoutJedi {
+justify-content: center;
+margin-top: 10px;
+margin: auto;
+margin-top: 20px;
 }
 .modal-content {
     color:white;
