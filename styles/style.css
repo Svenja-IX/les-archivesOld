@@ -30,6 +30,8 @@ main {
   width: 100%;
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 article {
     background: rgba(0, 0, 0,90%);
@@ -112,8 +114,9 @@ header .btn {
   background: rgb(30,30,30);
   color: white;
   width: 400px;
-  height: 400px;
-  margin: auto;
+  height: 500px;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 0;
   margin-bottom: 50px;
   display: flex;

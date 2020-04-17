@@ -9,7 +9,8 @@
               </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="jedi.php">
+              <!-- FORMULAIRE -->
+                <form action="jedi.php" method="POST">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Prénom</label>
                       <input type="text" class="form-control" name="jedi_prenom" id="jedi_prenom" placeholder="Prénom">
